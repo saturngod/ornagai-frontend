@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
@@ -25,7 +25,27 @@ a {
   }
 }
 
+/* start ORNAGAI */
+.ornagai_data , .engmm {
+	font-size: 84%;
+}
+.ornagai  {
+	padding-bottom: 12px;
+}
+.ornagai .state {
+	font-weight: bold;
+	margin-bottom: 12px;
+}
 
+.ornagai .def {
+	margin-bottom: 22px;
+}
+
+.synonym {
+	color: #dddddd;
+	font-weight: 400;
+}
+/* END */
 
 /* start */
 table
@@ -139,7 +159,7 @@ span.wbb:before
 	content: '\a0\7c\a0';
 	font-size: 70%;
 	vertical-align: 5%;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 	margin-left: -0.15em;
 	margin-right: -0.15em;
 }
@@ -843,8 +863,8 @@ span.x_xo0 > span.x_xoLblBlk
 	font-size: 90%;
 	display: block;
 	padding-bottom: 0.3em;
-	border-bottom: solid thin -apple-system-tertiary-label;
-	color: -apple-system-secondary-label;
+	border-bottom: solid thin #dddddd;
+	color: #b4b4b4;
 	margin-top: 2em;
 	margin-bottom: 0.5em;
 }
@@ -857,7 +877,7 @@ div.xrgBlock.x_xoLblBlkTop,
 span.x_xo0.x_xoLblBlkTop
 {
 	margin-top: 3em;
-	border-top: solid thin -apple-system-tertiary-label;
+	border-top: solid thin #dddddd;
 	margin-bottom: 1em;
 }
 html.apple_client-panel div.xrgBlock.x_xoLblBlkTop,
@@ -1192,7 +1212,7 @@ span.hg span.vg.x_weak,
 span.hg span.vg.x_weak span.v
 {
 	font-size: 100%;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 
 span.gramb span.hvg span.hv
@@ -1202,7 +1222,7 @@ span.gramb span.hvg span.hv
 span.x_xh0 span.vg
 {
 	font-weight: 200;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 
 span.x_xh0 span.vg span.v
@@ -1244,7 +1264,7 @@ span.hwg span.infg span.gp.tg_inf,
 span.hw span.gp.tg_hw,
 span.hvg span.hv span.gp.tg_hv
 {
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 
 /*
@@ -1535,7 +1555,7 @@ span.ph.x_rr,
 span.sn.x_rr,
 span.gr.x_rr
 {
-	border: solid 1px -apple-system-secondary-label;
+	border: solid 1px #b4b4b4;
 	/* margin-left: 0.12em; */
 	margin-right: 0.18em;
 	margin-top: 0.18em;
@@ -1572,11 +1592,11 @@ span.gr.x_rr
 
 span.lbl.x_rrbd
 {
-	border: solid -apple-system-secondary-label;
+	border: solid #b4b4b4;
 	border-width: 2px;
 	padding: 2px 4px 1px 4px;
 	-webkit-border-radius: 3px;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 	font-weight: 600;
 	font-size: 70%;
 	margin-right: 0.5em;
@@ -1612,7 +1632,7 @@ span.pr,
 span.prx
 {
 	font-weight: normal;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 	/*
 	font-family: 'Times New Roman';
 	*/
@@ -1623,7 +1643,7 @@ span.x_xh0 span.gp.tg_prx,
 span.x_xd0 span.x_xdh span.gp.tg_pr,
 span.x_xd0 span.x_xdh span.gp.tg_prx
 {
-	color: -apple-system-tertiary-label;
+	color: #dddddd;
 }
 
 span.hg span.pr,
@@ -1673,6 +1693,10 @@ span.hg > span.pr + span
 }
 */
 
+span[soundfile] {
+	display: none
+}
+
 span.ph
 {
 /*
@@ -1684,7 +1708,7 @@ span.ph
 span.cnt
 {
 	font-weight: 200;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 span.cnt.x_rr
 {
@@ -1693,7 +1717,7 @@ span.cnt.x_rr
 	padding-left: 0.2em;
 	padding-right: 0.2em;
 	color: text;
-	border: solid 1px -apple-system-secondary-label;
+	border: solid 1px #b4b4b4;
 	-webkit-border-radius: 2px;
 	font-size: 70%;
 	/* vertical-align: 10%; */
@@ -1707,16 +1731,16 @@ span.cnt.x_rr
 span.sn
 {
 	font-weight: 600;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 span.sn.x_rrbg
 {
-	Background: -apple-system-secondary-label;
-	border: solid -apple-system-secondary-label;
+	Background: #b4b4b4;
+	border: solid #b4b4b4;
 	border-width: 0px;
 	padding: 3px 2px 1px 2px;
 	-webkit-border-radius: 2px;
-	color: -apple-system-text-background;
+	
 	font-weight: 600;
 	font-size: 70%;
 	vertical-align: 10%;
@@ -1752,21 +1776,21 @@ span.eg span.ref
 span.eg span.general-text.t_eg_pr
 {
 	font-weight: 200;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 /* TR */
 span.eg span.general-text.t_eg_pri
 {
 	font-style: italic;
 	font-weight: 200;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 span.gp.t_arrow,
 span.general-text.t_arrow
 {
 	font-size: 90%;
 	vertical-align: -2%;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 
 
@@ -1775,7 +1799,7 @@ span.exg span.ex
 {
 	font-style: normal;
 	font-weight: 500;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 span.exg span.ex span.bold
 {
@@ -1791,12 +1815,12 @@ span.exg span.ex span.ge,
 span.exg span.ex span.sj
 {
 	font-weight: normal;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 span.hwg span.reg
 {
 	font-size: 170%;
-	color: -apple-system-tertiary-label;
+	color: #dddddd;
 }
 html.apple_client-panel span.hwg span.reg
 {
@@ -1807,12 +1831,12 @@ span.hwg span.pr span.reg,
 span.hwg span.prx span.reg
 {
 	font-size: 100%;
-	color: -apple-system-tertiary-label;
+	color: #dddddd;
 }
 
 span.lbl
 {
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 span.pronBlock span.lbl
 {
@@ -1822,12 +1846,12 @@ span.pronBlock span.lbl
 
 span.lbl.x_sqb
 {
-	background: -apple-system-secondary-label;
-	border: solid -apple-system-secondary-label;
+	background: #b4b4b4;
+	border: solid #b4b4b4;
 	border-width: 0px;
 	padding: 2px 4px 2px 4px;
 	font-size: 80%;
-	color: -apple-system-text-background;
+	
 	font-weight: 600;
 	margin-right: 1em;
 	vertical-align: 5%;
@@ -1847,7 +1871,7 @@ span.cntxt
 	padding: 0.33em;
 	margin-top: 0.3em;
 	*/
-	border: solid 1px -apple-system-tertiary-label;
+	border: solid 1px #dddddd;
 	padding: 0.13em 0.49em 0.13em 0.49em;
 	-webkit-border-radius: 3px;
 	margin-top: 0.1em;
@@ -1855,7 +1879,7 @@ span.cntxt
 span.note span.lbl,
 span.cntxt span.lbl
 {
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 span.note.x_nb
 {
@@ -1913,7 +1937,7 @@ span.etym	{font-weight:normal;}
 */
 span.etym > span.lbl
 {
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 span.etym span.dgg
 {
@@ -1931,7 +1955,7 @@ span.lg,
 span.gg
 {
 	font-style: italic;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 	font-size: 94%;
 	/*
 	margin-right: 0.3em;
@@ -1974,7 +1998,7 @@ span.con
 {
 	font-style: normal;
 	font-weight: 600;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 
 
@@ -2050,7 +2074,7 @@ span.hwtrans	 { font-weight: normal;}
 span.oup_label
 {
 	font-style: italic;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 span.oup_label.x_ni
 {
@@ -2212,7 +2236,7 @@ span.usageLbl
 {
 	font-weight: normal;
 	font-size: 90%;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 span.hw span.usageLbl
 {
@@ -2225,7 +2249,7 @@ span.general-text.t_label_block
 {
 	font-variant: small-caps;
 	margin-right: 0.3em;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 span.general-text.t_label_block
 {
@@ -2241,7 +2265,7 @@ span.etym span.gp.t_label,
 span.dgg span.gp.t_label
 {
 	margin-right: 0.3em;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 
 span.hw span.general-text.en_er,
@@ -2283,7 +2307,7 @@ span.pvsec span.gramb span.semb span.pgr,
 span.pvsec span.gramb span.pgr
 {
 	font-weight: 600;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 
 span.cb span.csec span.cwg span.cw,
@@ -2296,14 +2320,14 @@ span.csec span.cwg span.cw
 span.ind,
 span.gr
 {
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 
 span.lev,
 span.fld
 {
 	font-size: 90%;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 
 /*
@@ -2325,7 +2349,7 @@ span.trgg.x_xd2 > span.trg > span.trans span.trans.ty_pinyin
 	font-weight: normal;
 	margin-left: 0.2em;
 	margin-right: 0.2em;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 }
 
 
@@ -2336,7 +2360,7 @@ span.box
 	background-color: window;
 	padding: 0.33em 0.49em 0.33em 0.49em;
 	*/
-	border: solid 1px -apple-system-tertiary-label;
+	border: solid 1px #dddddd;
 	padding: 0.13em 0.49em 0.13em 0.49em;
 	-webkit-border-radius: 3px;
 	margin-top: 0.1em;
@@ -2374,7 +2398,7 @@ span.synGroup > span.syn.t_core > span.gp
 span.antList > span.gp.ty_label.tg_antList
 {
 	font-variant: small-caps;
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 	font-size: 80%;
 }	/* ANTONYMS */
 
@@ -2398,7 +2422,7 @@ span.feature-title
 {
 	display: block;
 
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 	font-weight: 500;
 	font-size: 90%;
 	line-height : 23px;
@@ -2409,7 +2433,7 @@ span.feature-title
 	
 	border-style : solid;
 	border-width : 1px 1px 1px 1px;
-	border-color : -apple-system-tertiary-label;
+	border-color : #dddddd;
 	-webkit-border-top-left-radius: 4px;
 	-webkit-border-top-right-radius: 4px;
 	-webkit-border-bottom-left-radius: 0px;
@@ -2425,7 +2449,7 @@ span.feature-body
 {
 	display: block;
 
-	color: -apple-system-label;
+	color: #222222;
 
 	padding-left : 10px;
 	padding-right : 10px;
@@ -2434,7 +2458,7 @@ span.feature-body
 
 	border-style : solid;
 	border-width : 0px 1px 1px 1px;
-	border-color : -apple-system-tertiary-label;
+	border-color : #dddddd;
 	-webkit-border-top-left-radius: 0px;
 	-webkit-border-top-right-radius: 0px;
 	-webkit-border-bottom-left-radius: 4px;
@@ -2454,7 +2478,7 @@ span.feature-caption
 {
 	display: block;
 
-	color: -apple-system-secondary-label;
+	color: #b4b4b4;
 	font-weight: normal;
 	font-size: 90%;
 
@@ -2536,7 +2560,7 @@ span.feature.t_encyclopaedic
 	margin-right: 1em;
 	margin-top: 1em;
 	margin-bottom: 2em;
-	border: solid 1px -apple-system-tertiary-label;
+	border: solid 1px #dddddd;
 	padding: 0.13em 0.49em 0.13em 0.49em;
 	-webkit-border-radius: 3px;
 	/* margin-top: 0.1em; */

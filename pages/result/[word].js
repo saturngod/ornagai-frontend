@@ -5,16 +5,27 @@ import Stack from '@mui/material/Stack';
 import SearchBar from '../../components/search_bar'
 import Grid from "@mui/material/Unstable_Grid2/Grid2";
 import { List, ListItem, ListItemButton, ListItemText } from "@mui/material";
+import speak from "../../utils/speak"
+import IconButton from '@mui/material/IconButton';
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 
-export default function Result({ result }) {
+export default function Result({ pass }) {
 
 
-    const res = result.result
+    const res = pass.data.result
+    const word = decodeURIComponent(pass.word)
 
 
     if (res == null) {
         return (
-            <div>Not Found</div>
+            <Container sx={{ pt: 5 }}>
+                <h1>Ornagai</h1>
+                <Stack>
+                    <SearchBar word={word}></SearchBar>
+                    <br />
+                    <div>Not found : <b>{word}</b> </div>
+                </Stack>
+            </Container>
         )
     }
     var oxford = res.oxford
@@ -42,17 +53,26 @@ export default function Result({ result }) {
     var engmm = res.eng_mm
     var engmm_text = ""
     var synonym = ""
-    var synonymlist = []
-    if (engmm != null) {
-        engmm_text = engmm.map((value) => "<div class='engmm'><div class='def'>" + value.definition + "</div></div>").join()
+    var synonymlist = res.synonym
+    if(synonymlist == null || synonymlist == undefined) {
+        synonymlist = []
+    }
+    
 
-        synonym = engmm.map((value) => {
-            return value.synonym
-        }).join(",")
-        if(synonym != "," && synonym != "") {
-            synonymlist = synonym.split(",")
-        }
-        
+    var myen = res.my_en
+    var myen_text = ""
+    if(myen != "") {
+        myen_text = ornagai.map((value) => {
+            if (value.def == "") {
+                return ""
+            }
+            return `<div class='myen'>
+             <div class='phonetics'>/ ${value.phonetics} / ${value.state}</div>
+             <div class='def'>${value.meaning}</div>
+             </div>
+             `
+
+        }).join("")
     }
 
     var spacing = 2
@@ -64,13 +84,30 @@ export default function Result({ result }) {
 
 
     const router = useRouter()
-    console.log(synonymlist)
-    return (
-        <Container sx={{ pt: 5 }}>
 
+    return (
+        <Container sx={{ pt: 1 }}>
+            <h1>Ornagai</h1>
             <Stack>
-                <SearchBar word={res.word}></SearchBar>
-                <h1>{res.word}</h1>
+                <SearchBar word={word}></SearchBar>
+                <h1>{word}</h1>
+                <span className="show-word">
+                    <IconButton onClick={() => {
+                        speak(word, "en-US")
+                    }}>
+                        <VolumeUpIcon />
+                    </IconButton>
+                    <span className='lang-name'>en-us</span>
+                    <IconButton onClick={() => {
+                        speak(word, "en-GB")
+                    }}>
+                        <VolumeUpIcon />
+                    </IconButton>
+                    <span className='lang-name'>en-GB</span>
+                </span>
+
+
+
                 <Grid container spacing={2}>
                     <Grid xs={spacing}>
                         {
@@ -82,7 +119,7 @@ export default function Result({ result }) {
                                 {
                                     synonymlist.map((val) => {
                                         return (<ListItem key={val} disablePadding>
-                                            <ListItemButton onClick={(event) => router.push("/result/" + encodeURIComponent(val))}>
+                                            <ListItemButton onClick={(event) => router.push("/result/" + encodeURIComponent(val.trim()))}>
                                                 <ListItemText primary={val}></ListItemText>
                                             </ListItemButton>
                                         </ListItem>)
@@ -93,6 +130,7 @@ export default function Result({ result }) {
                         </nav>
                     </Grid>
                     <Grid xs={right}>
+                    <div className="myen_data" dangerouslySetInnerHTML={{ __html: myen_text }}></div>
                         <div className="ornagai_data" dangerouslySetInnerHTML={{ __html: ornagai_text }}></div>
                         <div className="engmm_data" dangerouslySetInnerHTML={{ __html: engmm_text }}></div>
                         <div className="oxford_data" dangerouslySetInnerHTML={{ __html: oxford_text }}></div>
@@ -125,9 +163,10 @@ export async function getServerSideProps(context) {
         }
     })
     const result = await resp.json()
+    const pass = { word: word, data: result }
     return {
         props: {
-            result
+            pass
         }
     }
 }

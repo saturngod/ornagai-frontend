@@ -29,21 +29,43 @@ a {
 .ornagai_data , .engmm {
 	font-size: 84%;
 }
+
+
 .ornagai  {
 	padding-bottom: 12px;
 }
 .ornagai .state {
-	font-weight: bold;
 	margin-bottom: 12px;
+	font-size:120%;
 }
 
 .ornagai .def {
 	margin-bottom: 22px;
+	font-size:94%;
 }
 
 .synonym {
 	color: #dddddd;
 	font-weight: 400;
+}
+
+.engmm .def > p:first-child > b:first-child {
+	font-size: 170%;
+	font-weight: normal;
+}
+
+.show-word {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.show-word .display-word {
+	font-size:200%;
+}
+
+.show-word .lang-name {
+	font-size: 80%;
+	font-weight: 200;
 }
 /* END */
 
@@ -1872,9 +1894,9 @@ span.cntxt
 	margin-top: 0.3em;
 	*/
 	border: solid 1px #dddddd;
-	padding: 0.13em 0.49em 0.13em 0.49em;
+	padding: 1em;
 	-webkit-border-radius: 3px;
-	margin-top: 0.1em;
+	margin-top: 1em;
 }
 span.note span.lbl,
 span.cntxt span.lbl

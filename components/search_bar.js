@@ -16,7 +16,7 @@ export default function SearchBar({ word }) {
             id="Dictionary"
 
             onChange={(event, newValue) => {
-                console.log(newValue)
+                console.log(event)
                 if(newValue != undefined) {
                     router.push("/result/" + encodeURIComponent(newValue))
                 }
@@ -46,7 +46,12 @@ export default function SearchBar({ word }) {
                         },
                     }).then((response) => {
                         //setWordList(response.result)
-                        response.json().then(value => setWordList(value.result))
+                        
+                        response.json().then((value) => {
+                            if(value.result != undefined) {
+                                setWordList(value.result)
+                            }
+                        })
                     })
                 }
 
@@ -54,7 +59,12 @@ export default function SearchBar({ word }) {
             }}
             options={wordList}
             
-            renderInput={(params) => <TextField {...params} label="Enter text to search" />}
+            renderInput={(params) => <TextField {...params} label="Enter text to search" onKeyDown={e => {
+                console.log(e.code.toLowerCase())
+                if (e.code.toLowerCase() === 'enter' && e.target.value) {
+                    router.push("/result/" + encodeURIComponent(e.target.value))
+                }
+              }} />}
         />
     )
 }

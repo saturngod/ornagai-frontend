@@ -13,8 +13,8 @@ export default function Home({word}) {
   
 
   return (
-    <Container sx={{ pt: 5 }}>
-
+    <Container sx={{ pt: 1 }}>
+<h1>Ornagai</h1>
       <Stack spacing={2}>
       <SearchBar word=""></SearchBar>
         

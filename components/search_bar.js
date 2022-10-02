@@ -35,7 +35,7 @@ export default function SearchBar({ word }) {
                         .digest('hex')
                     
                     const url = process.env.API_HOST + `/search/${newValue}?timestamp=${timestamp}&hash=${hash}`
-                    console.log(url)
+                    
                     fetch(url, {
                         headers: {
                             'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ export default function SearchBar({ word }) {
             options={wordList}
             
             renderInput={(params) => <TextField {...params} label="Enter text to search" onKeyDown={e => {
-                console.log(e.code.toLowerCase())
+                
                 if (e.code.toLowerCase() === 'enter' && e.target.value) {
                     router.push("/result/" + encodeURIComponent(e.target.value))
                 }

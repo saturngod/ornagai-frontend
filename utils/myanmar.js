@@ -10,7 +10,7 @@ export function MyanmarSyllableList(data)  {
     for(var i=0; i< data.length; i++) {
         var refer = []
         var val = data[i]
-        console.log(val.refer)
+        
         if(val.refer != null) {
             refer = val.refer.split(",")
             res = res.concat(refer)

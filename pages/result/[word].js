@@ -31,7 +31,7 @@ export default function Result({ pass }) {
     var syn = res.synonym
     if (myanmar && res.synonym == null) {
         syn = MyanmarSyllableList(res.myen)
-        console.log(syn)
+        
     }
 
     var spacing = 2

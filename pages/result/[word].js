@@ -75,15 +75,14 @@ export async function getServerSideProps(context) {
 
 
     const timestamp = Date.now()
-    const app_id = "23321321"
-
-    const key = "69722703123"
+    const app_id = process.env.APP_ID
+    const key = process.env.APP_KEY
     const original_string = app_id + ":" + timestamp
     const hash = createHmac('sha1', key)
         .update(original_string)
         .digest('hex')
 
-    const resp = await fetch(`http://localhost:3000/api/result/${word}?timestamp=${timestamp}&hash=${hash}`, {
+    const resp = await fetch(`${process.env.API_HOST}/result/${word}?timestamp=${timestamp}&hash=${hash}`, {
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',

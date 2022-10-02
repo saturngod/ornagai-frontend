@@ -24,19 +24,19 @@ export default function SearchBar({ word }) {
             onInputChange={(event, newValue) => {
 
                 setValue(newValue)
-
+                
                 if (newValue.trim() != "") {
                     const timestamp = Date.now()
-                    const app_id = "23321321"
-        
-                    const key = "69722703123"
+                    const app_id = process.env.APP_ID
+                    const key = process.env.APP_KEY
                     const original_string = app_id + ":" + timestamp
                     const hash = createHmac('sha1', key)
                         .update(original_string)
                         .digest('hex')
-        
-        
-                    fetch(`http://localhost:3000/api/search/${newValue}?timestamp=${timestamp}&hash=${hash}`, {
+                    
+                    const url = process.env.API_HOST + `/search/${newValue}?timestamp=${timestamp}&hash=${hash}`
+                    console.log(url)
+                    fetch(url, {
                         headers: {
                             'Content-Type': 'application/json',
                             'Accept': 'application/json',

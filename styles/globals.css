@@ -34,14 +34,24 @@ a {
 .ornagai  {
 	padding-bottom: 12px;
 }
-.ornagai .state {
+.ornagai .state , .myen .state {
 	margin-bottom: 12px;
 	font-size:120%;
 }
 
 .ornagai .def {
 	margin-bottom: 22px;
-	font-size:94%;
+	font-size:84%;
+}
+
+.myen .phonetics {
+	font-size: 120%;
+	color: #b4b4b4;
+}
+
+.myen .meaning {
+	padding-top:10px;
+	font-size:84%;
 }
 
 .synonym {
@@ -49,7 +59,7 @@ a {
 	font-weight: 400;
 }
 
-.engmm .def > p:first-child > b:first-child {
+.engmm .def > .engmm_data > p:first-child > b:first-child {
 	font-size: 170%;
 	font-weight: normal;
 }

@@ -9,14 +9,12 @@ export default function SearchBar({ word }) {
     const [value, setValue] = useState(word)
     const router = useRouter()
 
-    
-
     return (
         <Autocomplete
             id="Dictionary"
 
             onChange={(event, newValue) => {
-                console.log(event)
+                
                 if(newValue != undefined) {
                     router.push("/result/" + encodeURIComponent(newValue))
                 }

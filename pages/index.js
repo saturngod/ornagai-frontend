@@ -14,13 +14,16 @@ export default function Home({ word }) {
 
 
   return (
-    <Container sx={{ pt: 1 }}>
-      <h1>Ornagai</h1>
-      <Stack spacing={2}>
-        <SearchBar word=""></SearchBar>
-      </Stack>
+    <>
       <Container sx={{ pt: 1 }}>
-        <Script>
+        <h1>Ornagai</h1>
+        <Stack spacing={2}>
+          <SearchBar word=""></SearchBar>
+        </Stack>
+      </Container>
+      <Container sx={{ pt: 3 }}>
+        <br/>
+        <Script id="ads">
           {`
 	atOptions = {
 		'key' : '7e4f681717ace319e62de052b7970e7d',
@@ -29,10 +32,10 @@ export default function Home({ word }) {
 		'width' : 728,
 		'params' : {}
 	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplayformat.com/7e4f681717ace319e62de052b7970e7d/invoke.js"></scr' + 'ipt>');
   `}
         </Script>
+        <Script src='https://www.profitabledisplayformat.com/7e4f681717ace319e62de052b7970e7d/invoke.js'></Script>
       </Container>
-    </Container>
+    </>
   )
 }

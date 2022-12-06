@@ -21,21 +21,7 @@ export default function Home({ word }) {
           <SearchBar word=""></SearchBar>
         </Stack>
       </Container>
-      <Container sx={{ pt: 3 }}>
-        <br/>
-        <Script id="ads">
-          {`
-	atOptions = {
-		'key' : '7e4f681717ace319e62de052b7970e7d',
-		'format' : 'iframe',
-		'height' : 90,
-		'width' : 728,
-		'params' : {}
-	};
-  `}
-        </Script>
-        <Script src='https://www.profitabledisplayformat.com/7e4f681717ace319e62de052b7970e7d/invoke.js'></Script>
-      </Container>
+      
     </>
   )
 }

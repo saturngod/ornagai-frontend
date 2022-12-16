@@ -9,10 +9,6 @@ import Script from 'next/script'
 export default function Home({ word }) {
 
 
-
-
-
-
   return (
     <>
       <Container sx={{ pt: 1 }}>
@@ -22,8 +18,8 @@ export default function Home({ word }) {
         </Stack>
       </Container>
 
-      <Container sx={{ pt: 2 }}>
-        <Script id="ad-load"> {`
+      <Container sx={{ pt: 5 }}>
+        <Script strategy="lazyOnload" id="ad-load"> {`
 	atOptions = {
 		'key' : '7e4f681717ace319e62de052b7970e7d',
 		'format' : 'iframe',
@@ -31,9 +27,10 @@ export default function Home({ word }) {
 		'width' : 728,
 		'params' : {}
 	};
-	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplayformat.com/7e4f681717ace319e62de052b7970e7d/invoke.js"></scr' + 'ipt>');
     `}
-        </Script></Container>
+        </Script>
+        <Script strategy="lazyOnload" id="ad-link"  src="https://www.profitabledisplayformat.com/7e4f681717ace319e62de052b7970e7d/invoke.js"></Script>
+        </Container>
 
     </>
   )

@@ -83,6 +83,14 @@ a {
 	max-width: 320px;
 	height: auto;
 }
+
+
+iframe {
+	width: 728px;
+    height: 90px;
+    margin: 0px auto;
+    display: block;
+}
 /* END */
 
 /* start */

@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import Script from 'next/script';
+import Container from '@mui/material/Container';
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx);
@@ -13,7 +14,7 @@ class MyDocument extends Document {
 
 
                     <link rel="preconnect" href="https://fonts.googleapis.com" />
-                    
+
                     <link
                         rel="stylesheet"
                         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
@@ -40,6 +41,18 @@ class MyDocument extends Document {
                 <body>
                     <Main />
                     <NextScript />
+                    <Container sx={{ pt: 2 }}>
+                        <Script id="ad-load"> {`
+	atOptions = {
+		'key' : '7e4f681717ace319e62de052b7970e7d',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+	document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.profitabledisplayformat.com/7e4f681717ace319e62de052b7970e7d/invoke.js"></scr' + 'ipt>');
+    `}
+                        </Script></Container>
                 </body>
             </Html>
         );

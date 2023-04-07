@@ -9,6 +9,7 @@
          .getVoices()
          .filter(voice => (voice.lang === lang && voice.name.substring(0, 4) == "Reed"));
      message.voice = voices[0];
+     message.rate = 0.8;
 
      speechSynthesis.speak(message);
  }
